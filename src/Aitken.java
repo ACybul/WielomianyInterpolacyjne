@@ -1,12 +1,12 @@
 public class Aitken extends Algorithm {
     
-    
+    //Konstruktor przyjujący wektory współrzędnych
     public Aitken(double[] X, double[] Y) {
         super(X, Y);
         System.out.println("Uzywany jest algorytm Aitkena");
     }
 
- 
+    //Funkcja obliczająca wartość wielomianu w danym punkcie
     @Override
     public double valueAt(double x, int degree) {   
         double[] r = (double[]) Y.clone();

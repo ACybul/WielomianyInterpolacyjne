@@ -1,5 +1,5 @@
 
-
+//Abstrakcyjna klasa bazowa dla algorytmów
 public abstract class Algorithm {
    
     protected final double[] X;

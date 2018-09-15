@@ -1,13 +1,13 @@
 
 public class Hermite extends Algorithm {
 
-
+    //Konstruktor przyjujący wektory współrzędnych
     public Hermite(double[] X, double[] Y) {
         super(X, Y);
         System.out.println("Uzywany jest algorytm Hermite'a");
         int n = X.length;
 
-     
+        //tablica dla wynikików pośrednich
         double[][] t = new double[n][n];
 
         for (int i = 0; i < n; i++) {
@@ -39,7 +39,7 @@ public class Hermite extends Algorithm {
         }
     }
 
-  
+    //Funkcja obliczająca wartość wielomianu w danym punkcie
     @Override
     public double valueAt(double x, int degree) {
         if (a == null) {
@@ -57,7 +57,7 @@ public class Hermite extends Algorithm {
         return result;
     }
 
-  
+    //Obliczanie silni
     public static long factorial(int number) {
         long result = 1;
 
@@ -68,7 +68,7 @@ public class Hermite extends Algorithm {
         return result;
     }
 
-
+    //Obliczanie różnicy dzielonej
     private double dividedDifference(double fa, double fb, double xa, double xb) {
         return (fb - fa) / (xb - xa);
     }

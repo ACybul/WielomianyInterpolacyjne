@@ -2,7 +2,7 @@
 
 public class Newton extends Algorithm {
 
-    
+     //Konstruktor przyjujący wektory współrzędnych
     public Newton(double[] X, double[] Y) {
         super(X, Y);
         System.out.println("Uzywany jest algorytm Newtona");
@@ -30,7 +30,7 @@ public class Newton extends Algorithm {
         }
     }
     
-  
+    //Funkcja obliczająca wartość wielomianu w danym punkcie
     @Override
     public double valueAt(double x, int degree) {
         if (a == null) return 0;      

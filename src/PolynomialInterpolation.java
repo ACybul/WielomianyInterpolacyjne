@@ -37,7 +37,7 @@ public class PolynomialInterpolation extends JFrame {
     
     private final Map<Point.Double, Double> tangent = new HashMap<>();
 
-
+    //Klasa rysująca wielomian
     private class InteractivePanel extends JPanel implements MouseListener, MouseMotionListener {
 
         public InteractivePanel() {
@@ -45,7 +45,7 @@ public class PolynomialInterpolation extends JFrame {
             addMouseMotionListener(this);
         }
 
-        
+        //Funkcja rysująca
         @Override
         public void paintComponent(Graphics g) {
             
@@ -78,7 +78,7 @@ public class PolynomialInterpolation extends JFrame {
 
             if (points.size() < 5) {
 
-               
+               //Rysowanie punktu
                 g2.setStroke(new BasicStroke(2));
                 int radius = 16;
                 g.setColor(Color.blue);
@@ -150,7 +150,7 @@ public class PolynomialInterpolation extends JFrame {
                 
                 double[] tangentValues = null;
 
-                
+                //Wybór odpowiedniego algorytmu
                 Algorithm algorithm;
                 switch (algorithmComboBox.getSelectedIndex()) {
                     case 0:
@@ -234,7 +234,7 @@ public class PolynomialInterpolation extends JFrame {
         public void mouseClicked(MouseEvent me) {
         }
 
-       
+       //Obsługa naciśnięcia myszy
         @Override
         public void mousePressed(MouseEvent me) {
 
@@ -262,7 +262,7 @@ public class PolynomialInterpolation extends JFrame {
             }
         }
 
-        
+        //Dodawanie punktu po puszczeniu przycisku
         @Override
         public void mouseReleased(MouseEvent me) {
 
@@ -291,7 +291,7 @@ public class PolynomialInterpolation extends JFrame {
         public void mouseExited(MouseEvent me) {
         }
 
-      
+        //Obsługa przesuwania myszy
         @Override
         public void mouseDragged(MouseEvent me) {
             if (!dragging && SwingUtilities.isLeftMouseButton(me)) {
@@ -366,7 +366,7 @@ public class PolynomialInterpolation extends JFrame {
         repaint();
     }
 
-    
+    //Skalowanie wykresu do wymiaru okna
     private double scale(double x, double minAllowed, double maxAllowed, double min, double max) {
         return (maxAllowed - minAllowed) * (x - min) / (max - min) + minAllowed;
     }

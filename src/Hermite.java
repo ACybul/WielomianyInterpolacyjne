@@ -4,7 +4,7 @@ public class Hermite extends Algorithm {
     //Konstruktor przyjujący wektory współrzędnych
     public Hermite(double[] X, double[] Y) {
         super(X, Y);
-        System.out.println("Uzywany jest algorytm Hermite'a");
+       // System.out.println("Uzywany jest algorytm Hermite'a");
         int n = X.length;
 
         //tablica dla wynikików pośrednich

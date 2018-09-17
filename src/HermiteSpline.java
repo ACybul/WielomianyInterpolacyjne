@@ -6,7 +6,7 @@ public class HermiteSpline extends Algorithm {
 
     public HermiteSpline(double[] X, double[] Y) {      
         super(X, Y);
-        System.out.println("Uzywany jest algorytm Hermite Spline");
+      //  System.out.println("Uzywany jest algorytm Hermite Spline");
     }
 
     static HermiteSpline create(double[] X, double[] Y, double[] tangent) {

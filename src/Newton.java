@@ -5,7 +5,7 @@ public class Newton extends Algorithm {
      //Konstruktor przyjujący wektory współrzędnych
     public Newton(double[] X, double[] Y) {
         super(X, Y);
-        System.out.println("Uzywany jest algorytm Newtona");
+    //    System.out.println("Uzywany jest algorytm Newtona");
         int n = X.length;
 
         double[][] t = new double[n][n];
